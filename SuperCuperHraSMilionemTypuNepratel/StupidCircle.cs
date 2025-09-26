@@ -19,7 +19,7 @@ namespace SuperCuperHraSMilionemTypuNepratel
         {
             g.FillEllipse(Brushes.Red, x, y, width, height);
         }
-        public override void DoYourThing()
+        public override void DoYourThing(int mx, int my)
         {
             TakeLife();
         }

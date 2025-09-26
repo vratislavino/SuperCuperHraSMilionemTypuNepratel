@@ -31,7 +31,7 @@ namespace SuperCuperHraSMilionemTypuNepratel
                 && my <= y+height;
         }
 
-        public abstract void DoYourThing();
+        public abstract void DoYourThing(int mx, int my);
 
         protected void TakeLife()
         {

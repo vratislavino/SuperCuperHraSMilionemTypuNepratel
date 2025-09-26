@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             canvas1 = new Canvas();
             timer1 = new System.Windows.Forms.Timer(components);
+            bar1 = new Bar();
             SuspendLayout();
             // 
             // canvas1
@@ -48,11 +49,21 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // bar1
+            // 
+            bar1.BackColor = Color.Black;
+            bar1.Location = new Point(12, 12);
+            bar1.MaxValue = 10;
+            bar1.Name = "bar1";
+            bar1.Size = new Size(347, 43);
+            bar1.TabIndex = 1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1635, 1099);
+            Controls.Add(bar1);
             Controls.Add(canvas1);
             Name = "Form1";
             Text = "Form1";
@@ -63,5 +74,6 @@
 
         private Canvas canvas1;
         private System.Windows.Forms.Timer timer1;
+        private Bar bar1;
     }
 }

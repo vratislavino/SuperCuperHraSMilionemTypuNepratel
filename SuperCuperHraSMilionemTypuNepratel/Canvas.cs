@@ -12,6 +12,8 @@ namespace SuperCuperHraSMilionemTypuNepratel
 {
     public partial class Canvas : UserControl
     {
+        public int EnemiesCount => enemies.Count;
+
         List<Enemy> enemies = new List<Enemy>();
 
         public Canvas()
@@ -47,7 +49,7 @@ namespace SuperCuperHraSMilionemTypuNepratel
             var enemy = enemies.FirstOrDefault(en => en.IsMouseOver(e.X, e.Y));
             if(enemy != null)
             {
-                enemy.DoYourThing();
+                enemy.DoYourThing(e.X, e.Y);
                 Invalidate();
             }
         }
