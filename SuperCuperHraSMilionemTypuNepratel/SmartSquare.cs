@@ -39,7 +39,10 @@ namespace SuperCuperHraSMilionemTypuNepratel
         public override void Draw(Graphics g)
         {
             g.DrawRectangle(outline, x, y, width, height);
-            for(int i = 0; i < regions.GetLength(0); i++)
+            g.DrawLine(outline, x + width / 2, y, x + width / 2, y + height);
+            g.DrawLine(outline, x, y + height / 2, x+width, y+height/2);
+
+            for (int i = 0; i < regions.GetLength(0); i++)
                 for(int j = 0; j < regions.GetLength(1); j++)
                     if (regions[i, j])
                         g.FillRectangle(Brushes.Red, 
